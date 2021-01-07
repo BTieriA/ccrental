@@ -4,37 +4,38 @@ import java.sql.Date;
 import java.sql.Time;
 
 public class InputVo {
-    private final Date rental_from_date;
-    private final Time rental_from_time;
-    private final Date rental_to_date;
-    private final Time rental_to_time;
-    private final int branch_index;
+    private final Date fromDate;
+    private final Time fromTime;
+    private final Date toDate;
+    private final Time toTime;
+    private final String branchDiv;
 
-    public InputVo(Date rental_from_date, Time rental_from_time, Date rental_to_date, Time rental_to_time, int branch_index) {
-        this.rental_from_date = rental_from_date;
-        this.rental_from_time = rental_from_time;
-        this.rental_to_date = rental_to_date;
-        this.rental_to_time = rental_to_time;
-        this.branch_index = branch_index;
+    public InputVo(Date fromDate, Time fromTime, Date toDate, Time toTime, String branchDiv) {
+        this.fromDate = fromDate;
+        this.fromTime = fromTime;
+        this.toDate = toDate;
+        this.toTime = toTime;
+        this.branchDiv = branchDiv;
     }
 
-    public Date getRental_from_date() {
-        return rental_from_date;
+
+    public Date getFromDate() {
+        return fromDate;
     }
 
-    public Time getRental_from_time() {
-        return rental_from_time;
+    public Time getFromTime() {
+        return fromTime;
     }
 
-    public Date getRental_to_date() {
-        return rental_to_date;
+    public Date getToDate() {
+        return toDate;
     }
 
-    public Time getRental_to_time() {
-        return rental_to_time;
+    public Time getToTime() {
+        return toTime;
     }
 
-    public int getBranch_index() {
-        return branch_index;
+    public String getBranchDiv() {
+        return branchDiv;
     }
 }
